@@ -7,6 +7,53 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos extras específicos para a página de gêneros */
+        .genres-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .genres-category {
+            margin-bottom: 40px;
+        }
+        .genres-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            letter-spacing: -0.3px;
+        }
+        .genres-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+        }
+        .genres-list li {
+            background-color: #111;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: #ccc;
+            transition: all 0.2s ease;
+            border: 1px solid #222;
+            cursor: default;
+        }
+        .genres-list li:hover {
+            background-color: #1f1f1f;
+            color: white;
+            border-color: #444;
+        }
+        @media (max-width: 768px) {
+            .genres-list li {
+                font-size: 0.75rem;
+                padding: 6px 14px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -31,14 +78,96 @@
 
     <main>
         <div class="container" style="padding-top: 120px;">
-            <h2>Nossos Gêneros</h2>
-            <p class="section-subtitle">Vertentes do house music que movem a Markozero</p>
-            <div class="genres-grid">
-                <div class="genre-card"><h3>Melodic House</h3><p>Synths emotivos, linhas de baixo profundas e construção progressiva.</p></div>
-                <div class="genre-card"><h3>Afro House</h3><p>Percussão tribal, vocais ancestrais e grooves hipnóticos.</p></div>
-                <div class="genre-card"><h3>Deep House</h3><p>Atmosferas suaves, jazz e soulfusion.</p></div>
-                <div class="genre-card"><h3>Tech House</h3><p>Minimal, repetitivo e energia de pista.</p></div>
-                <div class="genre-card"><h3>Bass House</h3><p>Wobbles, sub graves e atitude dançante.</p></div>
+            <h2>Gêneros</h2>
+            <p class="section-subtitle">Explore o universo musical da Markozero — baseado no ecossistema Beatport</p>
+        </div>
+
+        <div class="genres-container">
+            <!-- Categoria: House & Eletrônico (foco principal) -->
+            <div class="genres-category">
+                <h3>🎧 House & Main Floor</h3>
+                <ul class="genres-list">
+                    <li>Tech House</li>
+                    <li>Deep House</li>
+                    <li>Afro House</li>
+                    <li>Melodic House & Techno</li>
+                    <li>Progressive House</li>
+                    <li>Jackin House</li>
+                    <li>Funky House</li>
+                    <li>Bass House</li>
+                    <li>Organic House</li>
+                    <li>Minimal / Deep Tech</li>
+                    <li>Nu Disco / Disco</li>
+                    <li>Electro (Classic / Detroit / Modern)</li>
+                    <li>Electronica</li>
+                    <li>Mainstage</li>
+                    <li>Dance / Pop</li>
+                </ul>
+            </div>
+
+            <!-- Categoria: Techno & Trance -->
+            <div class="genres-category">
+                <h3>⚡ Techno & Trance</h3>
+                <ul class="genres-list">
+                    <li>Techno (Peak Time / Driving)</li>
+                    <li>Techno (Raw / Deep / Hypnotic)</li>
+                    <li>Hard Techno</li>
+                    <li>Trance (Main Floor)</li>
+                    <li>Trance (Raw / Deep / Hypnotic)</li>
+                    <li>Psy-Trance</li>
+                </ul>
+            </div>
+
+            <!-- Categoria: Bass & Club -->
+            <div class="genres-category">
+                <h3>🔊 Bass & Club</h3>
+                <ul class="genres-list">
+                    <li>Bass / Club</li>
+                    <li>Dubstep</li>
+                    <li>140 / Deep Dubstep / Grime</li>
+                    <li>Drum & Bass</li>
+                    <li>UK Garage / Bassline</li>
+                    <li>Breaks / Breakbeat / UK Bass</li>
+                    <li>Hard Dance / Hardcore / Neo Rave</li>
+                    <li>Trap / Future Bass</li>
+                </ul>
+            </div>
+
+            <!-- Categoria: Global & Latin -->
+            <div class="genres-category">
+                <h3>🌍 Global & Latin</h3>
+                <ul class="genres-list">
+                    <li>African</li>
+                    <li>Amapiano</li>
+                    <li>Caribbean</li>
+                    <li>Latin Electronic</li>
+                    <li>Latin</li>
+                    <li>Brazilian Funk</li>
+                    <li>Downtempo</li>
+                    <li>Ambient / Experimental</li>
+                </ul>
+            </div>
+
+            <!-- Categoria: Urban, Pop & Rock -->
+            <div class="genres-category">
+                <h3>🎤 Urban, Pop & Rock</h3>
+                <ul class="genres-list">
+                    <li>Hip-Hop</li>
+                    <li>R&B</li>
+                    <li>Pop</li>
+                    <li>Rock</li>
+                    <li>Country</li>
+                    <li>Indie Dance</li>
+                </ul>
+            </div>
+
+            <!-- Categoria: Ferramentas e Edições -->
+            <div class="genres-category">
+                <h3>🛠️ DJ Tools & Edits</h3>
+                <ul class="genres-list">
+                    <li>DJ Tools / Acapellas</li>
+                    <li>DJ Edits</li>
+                </ul>
             </div>
         </div>
     </main>
