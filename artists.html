@@ -1,29 +1,93 @@
-<main>
-    <div class="container" style="padding-top: 120px;">
-        <h2>Artistas</h2>
-        <div class="artists-grid">
-            <!-- Malky Barros -->
-            <div class="card">
-                <img class="card-img" src="https://via.placeholder.com/400?text=Malky+Barros" alt="Malky Barros">
-                <div class="card-content">
-                    <h3 class="card-title">Malky Barros</h3>
-                    <p>Produtor e DJ carioca com mais de 30 anos de estrada. Residente em Portugal, traz tech house, bass house e muito groove.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/malkybarros" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas | Markozero</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo_w.png" alt="Markozero"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container" style="padding-top: 120px;">
+            <h2>Artistas</h2>
+            <p class="section-subtitle">Conheça o talento da Markozero</p>
+            <div class="artists-grid">
+                <!-- Malky Barros -->
+                <div class="card">
+                    <img class="card-img" src="https://via.placeholder.com/400x400?text=Malky+Barros" alt="Malky Barros">
+                    <div class="card-content">
+                        <h3 class="card-title">Malky Barros</h3>
+                        <p>Produtor e DJ carioca com mais de 30 anos de estrada. Residente em Portugal, traz tech house, bass house e muito groove.</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/malkybarros" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Morppheus -->
-            <div class="card">
-                <img class="card-img" src="https://via.placeholder.com/400?text=Morppheus" alt="Morppheus">
-                <div class="card-content">
-                    <h3 class="card-title">Morppheus</h3>
-                    <p>Nascido no Rio de Janeiro, músico de formação e guitarrista, hoje se destaca no bass house e tech house. Unindo teoria musical à energia das pistas.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/morppheusmusic" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                <!-- Morppheus -->
+                <div class="card">
+                    <img class="card-img" src="https://via.placeholder.com/400x400?text=Morppheus" alt="Morppheus">
+                    <div class="card-content">
+                        <h3 class="card-title">Morppheus</h3>
+                        <p>Nascido no Rio de Janeiro, músico de formação e guitarrista, hoje se destaca no bass house e tech house. Unindo teoria musical à energia das pistas.</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/morppheusmusic" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </main>
+
+    <div class="fixed-player" id="fixedPlayer">
+        <div class="player-info">
+            <img id="playerCover" src="https://via.placeholder.com/48" alt="capa">
+            <div class="player-details">
+                <h4 id="playerTrackTitle">Nenhuma faixa</h4>
+                <p id="playerArtistName">Selecione uma música</p>
+            </div>
+        </div>
+        <div class="spotify-embed">
+            <iframe id="playerIframe" src="" allow="encrypted-media" style="width:100%; height:80px;"></iframe>
+        </div>
+        <button class="close-player" id="closePlayer">✕</button>
     </div>
-</main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <img src="assets/logo_w.png" alt="Markozero" style="height: 30px;">
+                <p>© 2026 Markozero Records</p>
+            </div>
+            <div class="footer-col">
+                <p><a href="about.html">Sobre</a> | <a href="contact.html">Contato</a></p>
+                <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a> | <a href="#"><i class="fab fa-spotify"></i> Spotify</a></p>
+            </div>
+        </div>
+        <div class="copyright">Todas as faixas são propriedade dos artistas e gravadora.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

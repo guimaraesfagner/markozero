@@ -1,10 +1,66 @@
-<main>
-    <div class="container" style="padding-top: 120px;">
-        <h2>Próximos Eventos</h2>
-        <div class="events-grid">
-            <div class="card"><div class="card-content"><h3>12.06.2026 - Club AURA, SP</h3><p>Markozero Night com Morppheus e convidados</p></div></div>
-            <div class="card"><div class="card-content"><h3>25.07.2026 - Warung, SC</h3><p>Malky Barros (Live Set) + Afro House session</p></div></div>
-            <div class="card"><div class="card-content"><h3>08.08.2026 - Laroc, SP</h3><p>Tech House Summit - Line-up completo</p></div></div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos | Markozero</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo_w.png" alt="Markozero"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container" style="padding-top: 120px;">
+            <h2>Próximos Eventos</h2>
+            <p class="section-subtitle">Agenda da Markozero</p>
+            <div class="events-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">12.06.2026 - Club AURA, SP</h3>
+                        <p>Markozero Night com Morppheus e convidados</p>
+                        <span class="card-genre">Tech House / Bass House</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">25.07.2026 - Warung, SC</h3>
+                        <p>Malky Barros (Live Set) + Afro House session</p>
+                        <span class="card-genre">Afro House / Deep House</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">08.08.2026 - Laroc, SP</h3>
+                        <p>Tech House Summit - Line-up completo</p>
+                        <span class="card-genre">Tech House</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
+
+    <div class="fixed-player" id="fixedPlayer">...</div>
+    <footer class="site-footer">...</footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
