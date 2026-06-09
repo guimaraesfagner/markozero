@@ -9,7 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>...</header>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo_w.png" alt="Markozero"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
     <main>
         <div class="container" style="padding-top: 120px; max-width: 800px;">
             <h2>Sobre a Markozero</h2>
@@ -17,8 +36,36 @@
             <p style="margin-top: 20px;">Nosso nome carrega a ideia do "marco zero" — o ponto de partida para uma nova era da música eletrônica. Seja bem-vindo ao nosso universo.</p>
         </div>
     </main>
-    <div class="fixed-player" id="fixedPlayer">...</div>
-    <footer class="site-footer">...</footer>
+
+    <!-- Player fixo -->
+    <div class="fixed-player" id="fixedPlayer">
+        <div class="player-info">
+            <img id="playerCover" src="https://via.placeholder.com/48" alt="capa">
+            <div class="player-details">
+                <h4 id="playerTrackTitle">Nenhuma faixa</h4>
+                <p id="playerArtistName">Selecione uma música</p>
+            </div>
+        </div>
+        <div class="spotify-embed">
+            <iframe id="playerIframe" src="" allow="encrypted-media" style="width:100%; height:80px;"></iframe>
+        </div>
+        <button class="close-player" id="closePlayer">✕</button>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <img src="assets/logo_w.png" alt="Markozero" style="height: 30px;">
+                <p>© 2026 Markozero Records</p>
+            </div>
+            <div class="footer-col">
+                <p><a href="about.html">Sobre</a> | <a href="contact.html">Contato</a></p>
+                <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a> | <a href="#"><i class="fab fa-spotify"></i> Spotify</a></p>
+            </div>
+        </div>
+        <div class="copyright">Todas as faixas são propriedade dos artistas e gravadora.</div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

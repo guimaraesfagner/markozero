@@ -37,6 +37,7 @@
         </div>
     </main>
 
+    <!-- Player fixo -->
     <div class="fixed-player" id="fixedPlayer">
         <div class="player-info">
             <img id="playerCover" src="https://via.placeholder.com/48" alt="capa">
@@ -67,7 +68,6 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Garantir que a função renderTracks seja chamada para all-releases
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof renderTracks !== 'undefined' && document.getElementById('all-releases')) {
                 renderTracks('all-releases');
