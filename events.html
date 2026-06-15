@@ -3,75 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos | Markozero</title>
+    <title>Eventos | Markozero Records</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="assets/logo_w.png" alt="Markozero"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="releases.html">Releases</a></li>
-                <li><a href="artists.html">Artists</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="genres.html">Genres</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <div class="container" style="padding-top: 120px;">
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fas fa-music"></i></span>
+            <span class="logo-wordmark">MARKO<span class="accent">ZERO</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="releases.html">Lançamentos</a></li>
+            <li><a href="artists.html">Artistas</a></li>
+            <li><a href="events.html" class="active">Eventos</a></li>
+            <li><a href="genres.html">Gêneros</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <span class="section-label">Agenda 2026</span>
             <h2>Próximos Eventos</h2>
-            <p class="section-subtitle">Agenda completa da Markozero – fique por dentro das nossas festas</p>
-            <div class="events-grid">
-                <div class="card"><div class="card-content"><h3 class="card-title">12.06.2026 - Club AURA, SP</h3><p>Markozero Night com Morppheus e convidados especiais. Set focado em Tech House e Bass House.</p><span class="card-genre">Tech House / Bass House</span></div></div>
-                <div class="card"><div class="card-content"><h3 class="card-title">25.07.2026 - Warung, SC</h3><p>Malky Barros (Live Set) + Afro House session com DJs convidados.</p><span class="card-genre">Afro House / Deep House</span></div></div>
-                <div class="card"><div class="card-content"><h3 class="card-title">08.08.2026 - Laroc, SP</h3><p>Tech House Summit - Line-up completo com artistas nacionais e internacionais.</p><span class="card-genre">Tech House</span></div></div>
-                <div class="card"><div class="card-content"><h3 class="card-title">20.09.2026 - D-edge, SP</h3><p>Markozero Showcase - Noite de lançamentos e participações especiais.</p><span class="card-genre">Melodic House / Techno</span></div></div>
-            </div>
+            <p class="section-subtitle" style="margin-bottom:0">Onde a Markozero vai estar — fique por dentro</p>
         </div>
-    </main>
-
-    <div class="fixed-player" id="fixedPlayer">
-        <div class="player-info">
-            <img id="playerCover" src="https://via.placeholder.com/48" alt="capa">
-            <div class="player-details">
-                <h4 id="playerTrackTitle">Nenhuma faixa</h4>
-                <p id="playerArtistName">Selecione uma música</p>
-            </div>
-        </div>
-        <div class="spotify-embed">
-            <iframe id="playerIframe" src="" allow="encrypted-media" style="width:100%; height:80px;"></iframe>
-        </div>
-        <button class="close-player" id="closePlayer">✕</button>
     </div>
+    <section style="border-bottom:none;">
+        <div class="container">
+            <div class="events-list">
 
-    <a href="index.html" class="floating-btn" aria-label="Voltar para a Home">🏠</a>
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-date-day">12</div>
+                        <div class="event-date-month">Jun</div>
+                    </div>
+                    <div class="event-divider"></div>
+                    <div class="event-info">
+                        <h3>Markozero Night — Club AURA</h3>
+                        <p>São Paulo, SP · Com Morppheus e convidados especiais. Set focado em Tech House e Bass House.</p>
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-venue">Tech House / Bass House</div>
+                        <span class="card-genre">SP</span>
+                    </div>
+                </div>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <img src="assets/logo_w.png" alt="Markozero" style="height: 30px;">
-                <p>© 2026 Markozero Records</p>
-            </div>
-            <div class="footer-col">
-                <p><a href="about.html">Sobre</a> | <a href="contact.html">Contato</a></p>
-                <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a> | <a href="#"><i class="fab fa-spotify"></i> Spotify</a></p>
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-date-day">25</div>
+                        <div class="event-date-month">Jul</div>
+                    </div>
+                    <div class="event-divider"></div>
+                    <div class="event-info">
+                        <h3>Malky Barros Live Set — Warung</h3>
+                        <p>Balneário Camboriú, SC · Live set + Afro House session com DJs convidados.</p>
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-venue">Afro House / Deep House</div>
+                        <span class="card-genre">SC</span>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-date-day">08</div>
+                        <div class="event-date-month">Ago</div>
+                    </div>
+                    <div class="event-divider"></div>
+                    <div class="event-info">
+                        <h3>Tech House Summit — Laroc</h3>
+                        <p>São Paulo, SP · Line-up completo com artistas nacionais e internacionais.</p>
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-venue">Tech House</div>
+                        <span class="card-genre">SP</span>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-date-day">20</div>
+                        <div class="event-date-month">Set</div>
+                    </div>
+                    <div class="event-divider"></div>
+                    <div class="event-info">
+                        <h3>Markozero Showcase — D-edge</h3>
+                        <p>São Paulo, SP · Noite de lançamentos e participações especiais.</p>
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-venue">Melodic House / Techno</div>
+                        <span class="card-genre">SP</span>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="copyright">Todas as faixas são propriedade dos artistas e gravadora.</div>
-    </footer>
+    </section>
+</main>
 
-    <script src="js/main.js"></script>
+<div class="fixed-player" id="fixedPlayer">
+    <div class="player-info">
+        <img id="playerCover" src="" alt="capa">
+        <div class="player-details">
+            <h4 id="playerTrackTitle">Nenhuma faixa</h4>
+            <p id="playerArtistName">Selecione uma música</p>
+        </div>
+    </div>
+    <div class="spotify-embed">
+        <iframe id="playerIframe" src="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowtransparency="true" frameborder="0"></iframe>
+    </div>
+    <button class="close-player" id="closePlayer">✕</button>
+</div>
+
+<a href="index.html" class="floating-btn" aria-label="Voltar para Home">🏠</a>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-music"></i></span>
+                <span class="logo-wordmark">MARKO<span class="accent">ZERO</span></span>
+            </div>
+            <p>Gravadora independente dedicada ao house music brasileiro e suas vertentes.</p>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-social-btn"><i class="fab fa-spotify"></i></a>
+                <a href="#" class="footer-social-btn"><i class="fab fa-soundcloud"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>Navegação</h5>
+            <ul>
+                <li><a href="releases.html">Lançamentos</a></li>
+                <li><a href="artists.html">Artistas</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Contato</h5>
+            <div class="footer-contact-item">
+                <div class="footer-contact-label">Demos</div>
+                <a href="mailto:demo@markozero.com" class="footer-contact-email">demo@markozero.com</a>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-contact-label">Booking</div>
+                <a href="mailto:booking@markozero.com" class="footer-contact-email">booking@markozero.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Markozero Records. Todos os direitos reservados.</p>
+        <p>Todas as faixas são propriedade dos artistas e da gravadora.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

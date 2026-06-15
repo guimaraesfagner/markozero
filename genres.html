@@ -3,77 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gêneros | Markozero</title>
+    <title>Gêneros | Markozero Records</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="assets/logo_w.png" alt="Markozero"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="releases.html">Releases</a></li>
-                <li><a href="artists.html">Artists</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="genres.html">Genres</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <div class="container" style="padding-top: 120px;">
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fas fa-music"></i></span>
+            <span class="logo-wordmark">MARKO<span class="accent">ZERO</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="releases.html">Lançamentos</a></li>
+            <li><a href="artists.html">Artistas</a></li>
+            <li><a href="events.html">Eventos</a></li>
+            <li><a href="genres.html" class="active">Gêneros</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <span class="section-label">Ecossistema musical</span>
             <h2>Gêneros</h2>
-            <p class="section-subtitle">Explore o universo musical da Markozero — baseado no ecossistema Beatport</p>
+            <p class="section-subtitle" style="margin-bottom:0">Baseado no ecossistema Beatport — o universo da Markozero</p>
         </div>
-        <div class="genres-container">
-            <div class="genres-category"><h3>🎧 House & Main Floor</h3><ul class="genres-list"><li>Tech House</li><li>Deep House</li><li>Afro House</li><li>Melodic House & Techno</li><li>Progressive House</li><li>Jackin House</li><li>Funky House</li><li>Bass House</li><li>Organic House</li><li>Minimal / Deep Tech</li><li>Nu Disco / Disco</li><li>Electro</li><li>Electronica</li><li>Mainstage</li><li>Dance / Pop</li></ul></div>
-            <div class="genres-category"><h3>⚡ Techno & Trance</h3><ul class="genres-list"><li>Techno (Peak Time / Driving)</li><li>Techno (Raw / Deep / Hypnotic)</li><li>Hard Techno</li><li>Trance (Main Floor)</li><li>Trance (Raw / Deep / Hypnotic)</li><li>Psy-Trance</li></ul></div>
-            <div class="genres-category"><h3>🔊 Bass & Club</h3><ul class="genres-list"><li>Bass / Club</li><li>Dubstep</li><li>140 / Deep Dubstep / Grime</li><li>Drum & Bass</li><li>UK Garage / Bassline</li><li>Breaks / Breakbeat / UK Bass</li><li>Hard Dance / Hardcore / Neo Rave</li><li>Trap / Future Bass</li></ul></div>
-            <div class="genres-category"><h3>🌍 Global & Latin</h3><ul class="genres-list"><li>African</li><li>Amapiano</li><li>Caribbean</li><li>Latin Electronic</li><li>Latin</li><li>Brazilian Funk</li><li>Downtempo</li><li>Ambient / Experimental</li></ul></div>
-            <div class="genres-category"><h3>🎤 Urban, Pop & Rock</h3><ul class="genres-list"><li>Hip-Hop</li><li>R&B</li><li>Pop</li><li>Rock</li><li>Country</li><li>Indie Dance</li></ul></div>
-            <div class="genres-category"><h3>🛠️ DJ Tools & Edits</h3><ul class="genres-list"><li>DJ Tools / Acapellas</li><li>DJ Edits</li></ul></div>
-        </div>
-    </main>
-
-    <div class="fixed-player" id="fixedPlayer">
-        <div class="player-info">
-            <img id="playerCover" src="https://via.placeholder.com/48" alt="capa">
-            <div class="player-details">
-                <h4 id="playerTrackTitle">Nenhuma faixa</h4>
-                <p id="playerArtistName">Selecione uma música</p>
-            </div>
-        </div>
-        <div class="spotify-embed">
-            <iframe id="playerIframe" src="" allow="encrypted-media" style="width:100%; height:80px;"></iframe>
-        </div>
-        <button class="close-player" id="closePlayer">✕</button>
     </div>
-
-    <a href="index.html" class="floating-btn" aria-label="Voltar para a Home">🏠</a>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <img src="assets/logo_w.png" alt="Markozero" style="height: 30px;">
-                <p>© 2026 Markozero Records</p>
-            </div>
-            <div class="footer-col">
-                <p><a href="about.html">Sobre</a> | <a href="contact.html">Contato</a></p>
-                <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a> | <a href="#"><i class="fab fa-spotify"></i> Spotify</a></p>
+    <section style="border-bottom:none;">
+        <div class="container">
+            <div class="genres-container">
+                <div class="genres-category">
+                    <h3>🎧 House &amp; Main Floor</h3>
+                    <ul class="genres-list">
+                        <li>Tech House</li><li>Deep House</li><li>Afro House</li>
+                        <li>Melodic House &amp; Techno</li><li>Progressive House</li>
+                        <li>Jackin House</li><li>Funky House</li><li>Bass House</li>
+                        <li>Organic House</li><li>Minimal / Deep Tech</li>
+                        <li>Nu Disco / Disco</li><li>Electro</li>
+                        <li>Electronica</li><li>Mainstage</li><li>Dance / Pop</li>
+                    </ul>
+                </div>
+                <div class="genres-category">
+                    <h3>⚡ Techno &amp; Trance</h3>
+                    <ul class="genres-list">
+                        <li>Techno (Peak Time / Driving)</li>
+                        <li>Techno (Raw / Deep / Hypnotic)</li>
+                        <li>Hard Techno</li>
+                        <li>Trance (Main Floor)</li>
+                        <li>Trance (Raw / Deep / Hypnotic)</li>
+                        <li>Psy-Trance</li>
+                    </ul>
+                </div>
+                <div class="genres-category">
+                    <h3>🔊 Bass &amp; Club</h3>
+                    <ul class="genres-list">
+                        <li>Bass / Club</li><li>Dubstep</li>
+                        <li>140 / Deep Dubstep / Grime</li>
+                        <li>Drum &amp; Bass</li><li>UK Garage / Bassline</li>
+                        <li>Breaks / Breakbeat / UK Bass</li>
+                        <li>Hard Dance / Hardcore / Neo Rave</li>
+                        <li>Trap / Future Bass</li>
+                    </ul>
+                </div>
+                <div class="genres-category">
+                    <h3>🌍 Global &amp; Latin</h3>
+                    <ul class="genres-list">
+                        <li>African</li><li>Amapiano</li><li>Caribbean</li>
+                        <li>Latin Electronic</li><li>Latin</li>
+                        <li>Brazilian Funk</li><li>Downtempo</li>
+                        <li>Ambient / Experimental</li>
+                    </ul>
+                </div>
+                <div class="genres-category">
+                    <h3>🎤 Urban, Pop &amp; Rock</h3>
+                    <ul class="genres-list">
+                        <li>Hip-Hop</li><li>R&amp;B</li><li>Pop</li>
+                        <li>Rock</li><li>Country</li><li>Indie Dance</li>
+                    </ul>
+                </div>
+                <div class="genres-category">
+                    <h3>🛠️ DJ Tools &amp; Edits</h3>
+                    <ul class="genres-list">
+                        <li>DJ Tools / Acapellas</li>
+                        <li>DJ Edits</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="copyright">Todas as faixas são propriedade dos artistas e gravadora.</div>
-    </footer>
+    </section>
+</main>
 
-    <script src="js/main.js"></script>
+<div class="fixed-player" id="fixedPlayer">
+    <div class="player-info">
+        <img id="playerCover" src="" alt="capa">
+        <div class="player-details">
+            <h4 id="playerTrackTitle">Nenhuma faixa</h4>
+            <p id="playerArtistName">Selecione uma música</p>
+        </div>
+    </div>
+    <div class="spotify-embed">
+        <iframe id="playerIframe" src="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowtransparency="true" frameborder="0"></iframe>
+    </div>
+    <button class="close-player" id="closePlayer">✕</button>
+</div>
+
+<a href="index.html" class="floating-btn" aria-label="Voltar para Home">🏠</a>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-music"></i></span>
+                <span class="logo-wordmark">MARKO<span class="accent">ZERO</span></span>
+            </div>
+            <p>Gravadora independente dedicada ao house music brasileiro e suas vertentes.</p>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-social-btn"><i class="fab fa-spotify"></i></a>
+                <a href="#" class="footer-social-btn"><i class="fab fa-soundcloud"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>Navegação</h5>
+            <ul>
+                <li><a href="releases.html">Lançamentos</a></li>
+                <li><a href="artists.html">Artistas</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Contato</h5>
+            <div class="footer-contact-item">
+                <div class="footer-contact-label">Demos</div>
+                <a href="mailto:demo@markozero.com" class="footer-contact-email">demo@markozero.com</a>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-contact-label">Booking</div>
+                <a href="mailto:booking@markozero.com" class="footer-contact-email">booking@markozero.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Markozero Records. Todos os direitos reservados.</p>
+        <p>Todas as faixas são propriedade dos artistas e da gravadora.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

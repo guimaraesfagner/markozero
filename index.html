@@ -3,198 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Markozero | Gravadora House Music</title>
+    <title>Markozero Records | House Music</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#home"><img src="assets/logo_w.png" alt="Markozero"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#releases">Releases</a></li>
-                <li><a href="#artists">Artists</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#genres">Genres</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <!-- HOME / HERO -->
-        <section id="home" class="hero">
-            <div class="parallax-bg"></div>
-            <div class="hero-content">
-                <img src="assets/hero_w.png" alt="Markozero">
-                <p>House Music · Underground · Inovação</p>
-            </div>
-        </section>
+<header>
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon"><i class="fas fa-music"></i></span>
+            <span class="logo-wordmark">MARKO<span class="accent">ZERO</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Início</a></li>
+            <li><a href="#releases">Lançamentos</a></li>
+            <li><a href="#artists">Artistas</a></li>
+            <li><a href="#events">Eventos</a></li>
+            <li><a href="#genres">Gêneros</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
 
-        <!-- RELEASES (primeiras 6 músicas) -->
-        <section id="releases">
-            <div class="container">
+<main>
+
+    <section id="home" class="hero">
+        <div class="parallax-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-title">MARKO<span class="accent">ZERO</span></div>
+            <div class="hero-records">RECORDS</div>
+            <p class="hero-desc">O novo marco do house music brasileiro. Do Melodic House ao Tech House, do Afro House ao Bass House.</p>
+            <div class="hero-actions">
+                <a href="#releases" class="btn-primary">Ouvir Lançamentos &rarr;</a>
+                <a href="#artists" class="btn-secondary">Conhecer Artistas</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="releases">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Catálogo</span>
                 <h2>Principais Lançamentos</h2>
                 <p class="section-subtitle">As faixas que estão movendo a cena</p>
-                <div class="releases-grid" id="home-releases"></div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="releases.html" class="btn-link">Ver todos os lançamentos →</a>
-                </div>
             </div>
-        </section>
+            <div class="releases-grid" id="home-releases"></div>
+            <div class="section-cta">
+                <a href="releases.html" class="btn-outline">Ver todos os lançamentos &rarr;</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- ARTISTS (3 artistas) -->
-        <section id="artists">
-            <div class="container">
+    <section id="artists">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Roster</span>
                 <h2>Artistas</h2>
                 <p class="section-subtitle">Conheça o talento da Markozero</p>
-                <div class="artists-grid">
-                    <!-- Malky Barros -->
-                    <div class="card">
-                        <img class="card-img" src="https://via.placeholder.com/400x400?text=Malky+Barros" alt="Malky Barros">
-                        <div class="card-content">
-                            <h3 class="card-title">Malky Barros</h3>
-                            <p>Produtor e DJ carioca com mais de 30 anos de estrada. Residente em Portugal, tech house, bass house e muito groove.</p>
-                            <div class="social-links">
-                                <a href="https://www.instagram.com/malkybarros" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
-                            </div>
-                        </div>
+            </div>
+            <div class="artists-grid">
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img class="card-img" src="https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Malky Barros">
                     </div>
-                    <!-- Morppheus -->
-                    <div class="card">
-                        <img class="card-img" src="https://via.placeholder.com/400x400?text=Morppheus" alt="Morppheus">
-                        <div class="card-content">
-                            <h3 class="card-title">Morppheus</h3>
-                            <p>Nascido no Rio, músico e guitarrista, destaque no bass house e tech house. Unindo teoria musical à energia das pistas.</p>
-                            <div class="social-links">
-                                <a href="https://www.instagram.com/morppheusmusic" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Gibi Music -->
-                    <div class="card">
-                        <img class="card-img" src="https://via.placeholder.com/400x400?text=Gibi+Music" alt="Gibi Music">
-                        <div class="card-content">
-                            <h3 class="card-title">Gibi Music</h3>
-                            <p>Projeto focado na cena Tech House, com identidade sonora própria e repertório 100% autoral, pensado para pista, energia e conexão real com o público.</p>
-                            <div class="social-links">
-                                <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
-                            </div>
-                        </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Malky Barros</h3>
+                        <p class="card-artist">Tech House · Bass House · Techno</p>
+                        <p style="color:var(--text-2);font-size:0.84rem;margin-bottom:14px;line-height:1.6;">Produtor e DJ carioca com mais de 30 anos de estrada. Residente em Portugal.</p>
+                        <a href="https://www.instagram.com/malkybarros" target="_blank" class="btn-play"><i class="fab fa-instagram"></i> Instagram</a>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="artists.html" class="btn-link">Conheça todos os artistas →</a>
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img class="card-img" src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Morppheus">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Morppheus</h3>
+                        <p class="card-artist">Bass House · Tech House · Electronic</p>
+                        <p style="color:var(--text-2);font-size:0.84rem;margin-bottom:14px;line-height:1.6;">Nascido no Rio, guitarrista e produtor. Unindo teoria musical à energia das pistas.</p>
+                        <a href="https://www.instagram.com/morppheusmusic" target="_blank" class="btn-play"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img class="card-img" src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Gibi Music">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Gibi Music</h3>
+                        <p class="card-artist">Tech House</p>
+                        <p style="color:var(--text-2);font-size:0.84rem;margin-bottom:14px;line-height:1.6;">Projeto focado na cena Tech House com identidade sonora própria e repertório 100% autoral.</p>
+                        <a href="artists.html" class="btn-play">Ver perfil &rarr;</a>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="section-cta">
+                <a href="artists.html" class="btn-outline">Conheça todos os artistas &rarr;</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- EVENTS (resumido) -->
-        <section id="events">
-            <div class="container">
+    <section id="events">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Agenda</span>
                 <h2>Próximos Eventos</h2>
-                <p class="section-subtitle">Agenda da Markozero</p>
-                <div class="events-grid">
-                    <div class="card"><div class="card-content"><h3 class="card-title">12.06.2026 - Club AURA, SP</h3><p>Markozero Night com Morppheus e convidados</p><span class="card-genre">Tech House / Bass House</span></div></div>
-                    <div class="card"><div class="card-content"><h3 class="card-title">25.07.2026 - Warung, SC</h3><p>Malky Barros (Live Set) + Afro House session</p><span class="card-genre">Afro House / Deep House</span></div></div>
-                    <div class="card"><div class="card-content"><h3 class="card-title">08.08.2026 - Laroc, SP</h3><p>Tech House Summit - Line-up completo</p><span class="card-genre">Tech House</span></div></div>
+                <p class="section-subtitle">Onde a Markozero vai estar</p>
+            </div>
+            <div class="events-list">
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-date-day">12</div>
+                        <div class="event-date-month">Jun</div>
+                    </div>
+                    <div class="event-divider"></div>
+                    <div class="event-info">
+                        <h3>Markozero Night — Club AURA</h3>
+                        <p>São Paulo, SP · Com Morppheus e convidados especiais</p>
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-venue">Tech House / Bass House</div>
+                        <span class="card-genre">SP</span>
+                    </div>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="events.html" class="btn-link">Ver agenda completa →</a>
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-date-day">25</div>
+                        <div class="event-date-month">Jul</div>
+                    </div>
+                    <div class="event-divider"></div>
+                    <div class="event-info">
+                        <h3>Malky Barros Live Set — Warung</h3>
+                        <p>Balneário Camboriú, SC · Afro House session</p>
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-venue">Afro House / Deep House</div>
+                        <span class="card-genre">SC</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-date-day">08</div>
+                        <div class="event-date-month">Ago</div>
+                    </div>
+                    <div class="event-divider"></div>
+                    <div class="event-info">
+                        <h3>Tech House Summit — Laroc</h3>
+                        <p>São Paulo, SP · Line-up nacional e internacional</p>
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-venue">Tech House</div>
+                        <span class="card-genre">SP</span>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="section-cta">
+                <a href="events.html" class="btn-outline">Ver agenda completa &rarr;</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- GENRES (completo, todas as vertentes) -->
-        <section id="genres" class="genres-preview">
-            <div class="container">
-                <h2>Vertentes que Representamos</h2>
-                <p class="section-subtitle">Um universo de sons – do house ao techno, do bass ao global</p>
+    <section id="genres">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Vertentes</span>
+                <h2>Gêneros que Representamos</h2>
+                <p class="section-subtitle">Um universo de sons — do house ao techno, do bass ao global</p>
             </div>
             <div class="genres-container">
-                <div class="genres-category"><h3>🎧 House & Main Floor</h3><ul class="genres-list"><li>Tech House</li><li>Deep House</li><li>Afro House</li><li>Melodic House & Techno</li><li>Progressive House</li><li>Jackin House</li><li>Funky House</li><li>Bass House</li><li>Organic House</li><li>Minimal / Deep Tech</li><li>Nu Disco / Disco</li><li>Electro</li><li>Electronica</li><li>Mainstage</li><li>Dance / Pop</li></ul></div>
-                <div class="genres-category"><h3>⚡ Techno & Trance</h3><ul class="genres-list"><li>Techno (Peak Time / Driving)</li><li>Techno (Raw / Deep / Hypnotic)</li><li>Hard Techno</li><li>Trance (Main Floor)</li><li>Trance (Raw / Deep / Hypnotic)</li><li>Psy-Trance</li></ul></div>
-                <div class="genres-category"><h3>🔊 Bass & Club</h3><ul class="genres-list"><li>Bass / Club</li><li>Dubstep</li><li>140 / Deep Dubstep / Grime</li><li>Drum & Bass</li><li>UK Garage / Bassline</li><li>Breaks / Breakbeat / UK Bass</li><li>Hard Dance / Hardcore / Neo Rave</li><li>Trap / Future Bass</li></ul></div>
-                <div class="genres-category"><h3>🌍 Global & Latin</h3><ul class="genres-list"><li>African</li><li>Amapiano</li><li>Caribbean</li><li>Latin Electronic</li><li>Latin</li><li>Brazilian Funk</li><li>Downtempo</li><li>Ambient / Experimental</li></ul></div>
-                <div class="genres-category"><h3>🎤 Urban, Pop & Rock</h3><ul class="genres-list"><li>Hip-Hop</li><li>R&B</li><li>Pop</li><li>Rock</li><li>Country</li><li>Indie Dance</li></ul></div>
-                <div class="genres-category"><h3>🛠️ DJ Tools & Edits</h3><ul class="genres-list"><li>DJ Tools / Acapellas</li><li>DJ Edits</li></ul></div>
-            </div>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="genres.html" class="btn-link">Explorar todos os gêneros →</a>
-            </div>
-        </section>
-
-        <!-- ABOUT (resumido) -->
-        <section id="about">
-            <div class="container" style="max-width: 800px; text-align: center;">
-                <h2>Sobre a Markozero</h2>
-                <p>Fundada para impulsionar o house music brasileiro no cenário global, a Markozero Records nasce com a missão de revelar talentos autênticos e unir vertentes que vão do Melodic House ao Tech House. Com curadoria afiada, artistas como Morppheus, Malky Barros e Gibi Music lideram um movimento que valoriza a originalidade e a conexão com a pista.</p>
-                <p style="margin-top: 20px;">Nosso nome carrega a ideia do "marco zero" — o ponto de partida para uma nova era da música eletrônica.</p>
-                <div style="margin-top: 40px;">
-                    <a href="about.html" class="btn-link">Ler história completa →</a>
+                <div class="genres-category">
+                    <h3>🎧 House &amp; Main Floor</h3>
+                    <ul class="genres-list">
+                        <li>Tech House</li><li>Deep House</li><li>Afro House</li>
+                        <li>Melodic House &amp; Techno</li><li>Progressive House</li>
+                        <li>Bass House</li><li>Organic House</li><li>Nu Disco</li>
+                    </ul>
+                </div>
+                <div class="genres-category">
+                    <h3>⚡ Techno &amp; Trance</h3>
+                    <ul class="genres-list">
+                        <li>Techno Peak Time</li><li>Techno Raw / Deep</li>
+                        <li>Hard Techno</li><li>Trance Main Floor</li><li>Psy-Trance</li>
+                    </ul>
+                </div>
+                <div class="genres-category">
+                    <h3>🔊 Bass &amp; Club</h3>
+                    <ul class="genres-list">
+                        <li>Bass / Club</li><li>Dubstep</li><li>Drum &amp; Bass</li>
+                        <li>UK Garage</li><li>Breaks / Breakbeat</li><li>Trap / Future Bass</li>
+                    </ul>
+                </div>
+                <div class="genres-category">
+                    <h3>🌍 Global &amp; Latin</h3>
+                    <ul class="genres-list">
+                        <li>Amapiano</li><li>African</li><li>Latin Electronic</li>
+                        <li>Brazilian Funk</li><li>Downtempo</li><li>Ambient</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+            <div class="section-cta">
+                <a href="genres.html" class="btn-outline">Explorar todos os gêneros &rarr;</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- CONTACT (resumido) -->
-        <section id="contact">
-            <div class="container">
+    <section id="about">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-content">
+                    <span class="section-label">Nossa história</span>
+                    <h2>Sobre a Markozero</h2>
+                    <p>Fundada para impulsionar o house music brasileiro no cenário global, a Markozero Records nasce com a missão de revelar talentos autênticos e unir vertentes que vão do Melodic House ao Tech House.</p>
+                    <p>Nosso nome carrega a ideia do "marco zero" — o ponto de partida para uma nova era da música eletrônica. Com artistas como Morppheus, Malky Barros e Gibi Music, construímos um catálogo que respeita a tradição enquanto abraça as tendências.</p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Artistas</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">9+</span>
+                            <span class="stat-label">Lançamentos</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">2026</span>
+                            <span class="stat-label">Fundação</span>
+                        </div>
+                    </div>
+                    <div style="margin-top:32px;">
+                        <a href="about.html" class="btn-outline">Ler história completa &rarr;</a>
+                    </div>
+                </div>
+                <img class="about-image" src="https://images.pexels.com/photos/1537638/pexels-photo-1537638.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Markozero">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Fale conosco</span>
                 <h2>Contato</h2>
-                <p class="section-subtitle">Fale com a gravadora</p>
-                <form class="contact-form" action="#" method="post">
-                    <div class="form-group"><input type="text" placeholder="Seu nome" required></div>
-                    <div class="form-group"><input type="email" placeholder="E-mail" required></div>
-                    <div class="form-group"><textarea rows="4" placeholder="Mensagem para a Markozero..."></textarea></div>
-                    <button type="submit" class="btn-submit">Enviar mensagem</button>
+                <p class="section-subtitle">Demos, booking e parcerias</p>
+            </div>
+            <div style="max-width:600px;margin:0 auto;">
+                <form action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="seu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Assunto</label>
+                        <select>
+                            <option value="">Selecione um assunto</option>
+                            <option>Enviar Demo</option>
+                            <option>Booking / Shows</option>
+                            <option>Imprensa</option>
+                            <option>Parcerias</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea rows="4" placeholder="Sua mensagem..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
                 </form>
-                <p style="text-align:center; margin-top:30px;">Para demos: <strong>demo@markozero.com</strong></p>
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="contact.html" class="btn-link">Ir para página de contato →</a>
-                </div>
+                <p style="text-align:center;margin-top:20px;color:var(--text-3);font-size:0.83rem;">
+                    Demo: <a href="mailto:demo@markozero.com" style="color:var(--green)">demo@markozero.com</a> &nbsp;&middot;&nbsp;
+                    Booking: <a href="mailto:booking@markozero.com" style="color:var(--green)">booking@markozero.com</a>
+                </p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Player fixo -->
-    <div class="fixed-player" id="fixedPlayer">
-        <div class="player-info">
-            <img id="playerCover" src="https://via.placeholder.com/48" alt="capa">
-            <div class="player-details">
-                <h4 id="playerTrackTitle">Nenhuma faixa</h4>
-                <p id="playerArtistName">Selecione uma música</p>
-            </div>
+</main>
+
+<div class="fixed-player" id="fixedPlayer">
+    <div class="player-info">
+        <img id="playerCover" src="" alt="capa">
+        <div class="player-details">
+            <h4 id="playerTrackTitle">Nenhuma faixa</h4>
+            <p id="playerArtistName">Selecione uma música</p>
         </div>
-        <div class="spotify-embed">
-            <iframe id="playerIframe" src="" allow="encrypted-media" style="width:100%; height:80px;"></iframe>
-        </div>
-        <button class="close-player" id="closePlayer">✕</button>
     </div>
+    <div class="spotify-embed">
+        <iframe id="playerIframe" src="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowtransparency="true" frameborder="0"></iframe>
+    </div>
+    <button class="close-player" id="closePlayer" aria-label="Fechar">✕</button>
+</div>
 
-    <!-- Botão flutuante "Voltar ao topo" -->
-    <a href="#home" class="floating-btn" id="backToTop" aria-label="Voltar ao topo">↑</a>
+<a href="#home" class="floating-btn" id="backToTop" aria-label="Voltar ao topo">↑</a>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <img src="assets/logo_w.png" alt="Markozero" style="height: 30px;">
-                <p>© 2026 Markozero Records</p>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo" style="text-decoration:none;">
+                <span class="logo-icon"><i class="fas fa-music"></i></span>
+                <span class="logo-wordmark">MARKO<span class="accent">ZERO</span></span>
             </div>
-            <div class="footer-col">
-                <p><a href="about.html">Sobre</a> | <a href="contact.html">Contato</a></p>
-                <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a> | <a href="#"><i class="fab fa-spotify"></i> Spotify</a></p>
+            <p>Gravadora independente dedicada ao house music brasileiro e suas vertentes. Do Tech House ao Afro House.</p>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-social-btn" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="#" class="footer-social-btn" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <div class="copyright">Todas as faixas são propriedade dos artistas e gravadora.</div>
-    </footer>
+        <div class="footer-col">
+            <h5>Navegação</h5>
+            <ul>
+                <li><a href="releases.html">Lançamentos</a></li>
+                <li><a href="artists.html">Artistas</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="genres.html">Gêneros</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Contato</h5>
+            <div class="footer-contact-item">
+                <div class="footer-contact-label">Demos</div>
+                <a href="mailto:demo@markozero.com" class="footer-contact-email">demo@markozero.com</a>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-contact-label">Booking</div>
+                <a href="mailto:booking@markozero.com" class="footer-contact-email">booking@markozero.com</a>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-contact-label">Imprensa</div>
+                <a href="mailto:press@markozero.com" class="footer-contact-email">press@markozero.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Markozero Records. Todos os direitos reservados.</p>
+        <p>Todas as faixas são propriedade dos artistas e da gravadora.</p>
+    </div>
+</footer>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
