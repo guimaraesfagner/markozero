@@ -78,7 +78,7 @@ function renderTracks(containerId, limit) {
         card.className = 'card';
         card.innerHTML = `
             <div class="card-img-wrap">
-                <img class="card-img" src="${coverUrl}" alt="${escapeHtml(track.title)}" onerror="this.src='https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400'">
+                <img class="card-img" src="${coverUrl}" alt="${escapeHtml(track.title)}" onerror="this.src='assets/icon.png'">
                 <div class="card-play-overlay">
                     <button class="card-play-btn" data-track-id="${trackId}" aria-label="Ouvir ${escapeHtml(track.title)}">&#9654;</button>
                 </div>
