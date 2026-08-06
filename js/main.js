@@ -1,70 +1,86 @@
+// ============================================================
+// LISTA DE MÚSICAS (use URLs completas do Spotify)
+// Para adicionar uma nova música, copie o formato abaixo:
+// { url: "https://open.spotify.com/intl-pt/track/ID_DA_MUSICA", title: "Nome da Música", artist: "Artista", genre: "Gênero" }
+// ============================================================
 const tracks = [
-    { id: "4FeUl4t6MuYZ6TzUr42IQF", title: "Children Roses - Vip Mix", artist: "Malky Barros", genre: "Tech House" },
-    { id: "02oCJv2jUnmZuMhBYknlBw", title: "Pump Up", artist: "PRINSH, EBO Live, Malky Barros", genre: "Bass House" },
-    { id: "64p8MCyZ694ikWRSz3XVB2", title: "Changer", artist: "Malky Barros, DJ Mayon", genre: "House" },
-    { id: "2GzyJvxqqexrhCTN0pByfv", title: "Jack3d", artist: "Morppheus, Davz", genre: "Bass House" },
-    { id: "42PrOGI0IL85RE3okMVO5s", title: "Pense", artist: "Morppheus, Calerc", genre: "Tech House" },
-    { id: "3BaPC0eT9dhtNxZ72bj1yI", title: "Oops, I Did Again", artist: "Morppheus", genre: "Electronic" },
-    { id: "7ckuWB5Xl2q2Yk4XpKFh3k", title: "Gibi Track 1", artist: "Gibi Music", genre: "Tech House" },
-    { id: "6RTLVlaCNyqOQJiYMKgt3a", title: "Gibi Track 2", artist: "Gibi Music", genre: "Tech House" },
-    { id: "4OpKnYWRtzte4mpq7PYG5M", title: "Gibi Track 3", artist: "Gibi Music", genre: "Tech House" }
+    // Malky Barros
+    { url: "https://open.spotify.com/intl-pt/track/4FeUl4t6MuYZ6TzUr42IQF", title: "Children Roses - Vip Mix", artist: "Malky Barros", genre: "Tech House" },
+    { url: "https://open.spotify.com/intl-pt/track/02oCJv2jUnmZuMhBYknlBw", title: "Pump Up", artist: "PRINSH, EBO Live, Malky Barros", genre: "Bass House" },
+    { url: "https://open.spotify.com/intl-pt/track/64p8MCyZ694ikWRSz3XVB2", title: "Changer", artist: "Malky Barros, DJ Mayon", genre: "House" },
+    // Morppheus
+    { url: "https://open.spotify.com/intl-pt/track/2GzyJvxqqexrhCTN0pByfv", title: "Jack3d", artist: "Morppheus, Davz", genre: "Bass House" },
+    { url: "https://open.spotify.com/intl-pt/track/42PrOGI0IL85RE3okMVO5s", title: "Pense", artist: "Morppheus, Calerc", genre: "Tech House" },
+    { url: "https://open.spotify.com/intl-pt/track/3BaPC0eT9dhtNxZ72bj1yI", title: "Oops, I Did Again", artist: "Morppheus", genre: "Electronic" },
+    // Gibi Music
+    { url: "https://open.spotify.com/intl-pt/track/7ckuWB5Xl2q2Yk4XpKFh3k", title: "Gibi Track 1", artist: "Gibi Music", genre: "Tech House" },
+    { url: "https://open.spotify.com/intl-pt/track/6RTLVlaCNyqOQJiYMKgt3a", title: "Gibi Track 2", artist: "Gibi Music", genre: "Tech House" },
+    { url: "https://open.spotify.com/intl-pt/track/4OpKnYWRtzte4mpq7PYG5M", title: "Gibi Track 3", artist: "Gibi Music", genre: "Tech House" }
 ];
 
-const playerBar = document.getElementById('fixedPlayer');
-const playerIframe = document.getElementById('playerIframe');
-const playerTrackTitle = document.getElementById('playerTrackTitle');
-const playerArtistName = document.getElementById('playerArtistName');
-const playerCover = document.getElementById('playerCover');
-const closePlayerBtn = document.getElementById('closePlayer');
+// ============================================================
+// FUNÇÕES AUXILIARES
+// ============================================================
 
-function loadTrack(trackId, trackTitle, trackArtist) {
-    if (!trackId) return;
-    playerTrackTitle.textContent = trackTitle;
-    playerArtistName.textContent = trackArtist;
-    if (playerCover) {
-        playerCover.src = `https://i.scdn.co/image/ab67616d0000b273${trackId}`;
-        playerCover.style.display = 'block';
-    }
-    playerIframe.src = `https://open.spotify.com/embed/track/${trackId}?utm_source=generator`;
-    playerBar.classList.add('active');
+// Extrai o ID da música a partir da URL do Spotify
+function getTrackId(url) {
+    const match = url.match(/\/track\/([a-zA-Z0-9]+)/);
+    return match ? match[1] : null;
 }
 
-function closePlayer() {
-    playerIframe.src = '';
-    playerBar.classList.remove('active');
-}
-
+// Escapa caracteres HTML para evitar XSS
 function escapeHtml(str) {
     return String(str).replace(/[&<>"']/g, function(c) {
         return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
     });
 }
 
-function attachPlayButtons() {
-    document.querySelectorAll('[data-track-id]').forEach(el => {
-        el.addEventListener('click', function(e) {
-            e.preventDefault();
-            const id = this.getAttribute('data-track-id');
-            const title = this.getAttribute('data-track-title');
-            const artist = this.getAttribute('data-track-artist');
-            loadTrack(id, title, artist);
-        });
-    });
+// ============================================================
+// PLAYER FIXO (footer)
+// ============================================================
+
+const playerIframe = document.getElementById('playerIframe');
+const playerBar = document.getElementById('fixedPlayer');
+const closePlayerBtn = document.getElementById('closePlayer');
+
+// Carrega uma música no player fixo (recebe o ID da faixa)
+function loadTrack(trackId) {
+    if (!trackId || !playerIframe || !playerBar) return;
+    const embedUrl = `https://open.spotify.com/embed/track/${trackId}?utm_source=generator`;
+    playerIframe.src = embedUrl;
+    playerBar.classList.add('active');
 }
+
+// Fecha o player fixo
+function closePlayer() {
+    if (playerIframe) playerIframe.src = '';
+    if (playerBar) playerBar.classList.remove('active');
+}
+
+// ============================================================
+// RENDERIZAÇÃO DOS CARDS
+// ============================================================
 
 function renderTracks(containerId, limit) {
     const container = document.getElementById(containerId);
     if (!container) return;
+
     const list = limit ? tracks.slice(0, limit) : tracks;
     container.innerHTML = '';
+
     list.forEach(track => {
+        const trackId = getTrackId(track.url);
+        if (!trackId) return; // pula se não conseguir extrair o ID
+
+        const coverUrl = `https://i.scdn.co/image/ab67616d0000b273${trackId}`;
+
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
             <div class="card-img-wrap">
-                <img class="card-img" src="https://i.scdn.co/image/ab67616d0000b273${track.id}" alt="${escapeHtml(track.title)}" onerror="this.src='https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400'">
+                <img class="card-img" src="${coverUrl}" alt="${escapeHtml(track.title)}" onerror="this.src='https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400'">
                 <div class="card-play-overlay">
-                    <button class="card-play-btn" data-track-id="${track.id}" data-track-title="${escapeHtml(track.title)}" data-track-artist="${escapeHtml(track.artist)}" aria-label="Ouvir ${escapeHtml(track.title)}">&#9654;</button>
+                    <button class="card-play-btn" data-track-id="${trackId}" aria-label="Ouvir ${escapeHtml(track.title)}">&#9654;</button>
                 </div>
             </div>
             <div class="card-content">
@@ -72,13 +88,25 @@ function renderTracks(containerId, limit) {
                 <p class="card-artist">${escapeHtml(track.artist)}</p>
                 <span class="card-genre">${escapeHtml(track.genre)}</span>
                 <br>
-                <button class="btn-play" data-track-id="${track.id}" data-track-title="${escapeHtml(track.title)}" data-track-artist="${escapeHtml(track.artist)}">&#9654; Ouvir</button>
+                <button class="btn-play" data-track-id="${trackId}">&#9654; Ouvir</button>
             </div>
         `;
         container.appendChild(card);
     });
-    attachPlayButtons();
+
+    // Adiciona eventos aos botões "Ouvir" (tanto os do overlay quanto os do texto)
+    document.querySelectorAll('[data-track-id]').forEach(el => {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            const id = this.getAttribute('data-track-id');
+            loadTrack(id);
+        });
+    });
 }
+
+// ============================================================
+// FUNÇÕES DE INICIALIZAÇÃO (menu, parallax, scroll suave, etc.)
+// ============================================================
 
 function initMobileMenu() {
     const hamburger = document.getElementById('hamburger') || document.querySelector('.hamburger');
@@ -139,13 +167,22 @@ function initBackToTop() {
     }, { passive: true });
 }
 
+// ============================================================
+// INICIALIZAÇÃO GERAL
+// ============================================================
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Funcionalidades da UI
     initMobileMenu();
     initParallax();
     initSmoothScroll();
     initNavHighlight();
     initBackToTop();
+
+    // Player fixo
     if (closePlayerBtn) closePlayerBtn.addEventListener('click', closePlayer);
+
+    // Renderiza os cards
     if (document.getElementById('home-releases')) renderTracks('home-releases', 6);
     if (document.getElementById('all-releases')) renderTracks('all-releases');
 });
